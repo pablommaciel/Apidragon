@@ -4,9 +4,9 @@ const app = express();
 
 const connection = mysql.createConnection({
   host: '185.239.210.154',
-  user: 'u625977176_pingolbet',
-  password: 'Ppp135198000',
-  database: 'u625977176_pingolbet',
+  user: 'u625977176_pingolbetDrag',
+  password: 'Pp135198000',
+  database: 'u625977176_pingolbetDrag',
   connectTimeout: 60000,
   charset: 'utf8mb4'
 });
