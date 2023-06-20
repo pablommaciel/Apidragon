@@ -4,13 +4,12 @@ const app = express();
 
 const connection = mysql.createConnection({
   host: '185.239.210.154',
-  user: 'u625977176_alcantradragon',
-  password: 'Pp1351980',
-  database: 'u625977176_alcantradragon',
+  user: 'u625977176_pingolbet',
+  password: 'Ppp135198000',
+  database: 'u625977176_pingolbet',
   connectTimeout: 60000,
   charset: 'utf8mb4'
 });
-
 
 connection.connect(err => {
   if (err) {
@@ -26,7 +25,7 @@ let buffer = null;
 
 setInterval(() => {
   //console.log('Verificando atualizações...');
-  connection.query('SELECT * FROM dragontiger ORDER BY ID DESC LIMIT 1', (err, rows) => {
+  connection.query('SELECT * FROM spaceman ORDER BY ID DESC LIMIT 1', (err, rows) => {
     if(err) {
       console.error('Erro ao consultar o banco de dados: ', err);
       return;
@@ -57,6 +56,6 @@ app.get('/game-results', (req, res) => {
   res.json({ results: `[` + buffer + `]`});
 });
 
-app.listen(3003, () => {
-  console.log('App ouvindo na porta 3003');
+app.listen(3002, () => {
+  console.log('App ouvindo na porta 3001');
 });
